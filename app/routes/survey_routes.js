@@ -14,18 +14,18 @@ const requireToken = passport.authenticate('bearer', { session: false })
 
 const router = express.Router()
 
-// Create a Survey 
+// Create a Survey
 router.post('/survey', requireToken, (req, res, next) => {
-    // request data from the client and store to variable
-    const surveyData = req.body.survey
-    // request id from user object and store to the owner
-    surveyData.owner = req.user._id
+  // request data from the client and store to variable
+  const surveyData = req.body.survey
+  // request id from user object and store to the owner
+  surveyData.owner = req.user._id
 
-    Survey.create(surveyData)
-        .then((survey) => {
-            res.status(201).json(survey)
-        })
-        .catch(next)
+  Survey.create(surveyData)
+    .then((survey) => {
+      res.status(201).json(survey)
+    })
+    .catch(next)
 })
 
 // Update a Survey (Auth)
