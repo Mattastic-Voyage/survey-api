@@ -28,9 +28,27 @@ router.post('/survey', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-// Update a Survey (Auth)
-
 // Update a Survey (Response)
+router.patch('/survey/:id', (req, res, next) => {
+  const id = req.params.id
+  Survey.findById(id)
+    .then(survey => {
+      for (let x = 0; x < survey.length; x++) {
+        if (survey[x]._id === id) {
+          survey[x].response.push(req.body.response)
+        }
+      }
+      survey.save(err => {
+        if (!err) {
+          res.status(204).json({ response: req.params.id })
+        }
+      })
+    }
+    )
+    .catch(next)
+})
+
+// Update a Survey (Auth)
 
 // Index Survey(Show all surveys)
 
