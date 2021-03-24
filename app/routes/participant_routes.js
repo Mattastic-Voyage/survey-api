@@ -3,7 +3,7 @@ const router = express.Router()
 
 // require participant model
 const Participant = require('./../models/participant')
-const handle404 = require('./../lib/custom_errors')
+const handle404 = require('../../lib/custom_errors')
 
 // INDEX
 // GET /participants

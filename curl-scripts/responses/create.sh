@@ -5,7 +5,7 @@ curl 'http://localhost:4741/responses' \
   --data '{
     "response": {
       "response": "'"${RESPONSE}"'",
-      "surveyId": "'"${REST_ID}"'",
+      "surveyId": "'"${SURVEY_ID}"'",
       "participant": "'"${PARTICIPANT_ID}"'"
     }
   }'

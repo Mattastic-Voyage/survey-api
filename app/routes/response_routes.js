@@ -3,7 +3,7 @@ const router = express.Router()
 
 // require survey model
 const Survey = require('./../models/survey')
-const handle404 = require('./../lib/custom_errors')
+const handle404 = require('../../lib/custom_errors')
 
 // CREATE
 // POST /responses/

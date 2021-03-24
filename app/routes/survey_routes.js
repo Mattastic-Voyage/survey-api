@@ -4,7 +4,7 @@ const router = express.Router()
 // require survey model
 const Survey = require('./../models/survey')
 const Participant = require('./../models/participant')
-const handle404 = require('./../lib/custom_errors')
+const handle404 = require('../../lib/custom_errors')
 
 // INDEX
 // GET /surveys
