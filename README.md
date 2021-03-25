@@ -29,16 +29,57 @@
 >> ### Survey Routes 
 >>> | HTTP Method | URL Path | Action | CRUD |
 >>> |--|--|--|--|
->>> | POST |  | create | (C)reate |
->>> | GET |  | index or list | (R)ead |
->>> | GET |  | show or retrieve | (R)ead |
->>> | PATCH |  | update | (U)pdate |
->>> | DELETE |  | destroy | (D)elete |
+>>> | POST | /surveys | create survey | (C)reate |
+>>> | POST | /surveys/:id/participants | create participant | (C)reate |
+>>> | GET | /surveys | index or list | (R)ead |
+>>> | GET | /surveys/:id | show or retrieve | (R)ead |
+>>> | PATCH | /surveys/:id | update | (U)pdate |
+>>> | DELETE | /surveys/:id | destroy | (D)elete |
+>>> | DELETE | /surveys/:id/surveys | destroy participant | (D)elete |
 >>>
 >>> #### Curl-Scripts
 >>> | Action | JSON | Command | Success | Failure | 
 >>> |--|--|--|--|--|
->>> |  |  |  |  |  |
+>>> | create participant | `{ "survey": { "participantId": "'"${PARTICIPANT_ID}"'" } }` | `SURVEY_ID="SURVEY_ID_HERE" CUSTOMER_ID="CUSTOMER_ID_HERE" sh curl-scripts/survey/add_participants.sh` | `201 Created` | `401 Not Found` |
+>>> | create survey | ``{ "survey": { "title": "'"${TITLE}"'", "question": "'"${QUESTION}"'" } }`` | ``TITLE='TITLE' QUESTION='QUESTION' sh curl-scripts/survey/create-survey.sh`` | `201 Created` | `401 Not Found` |
+>>> | index surveys |  | `sh curl-scripts/surveys/index.sh` | `201 Created` | `401 Not Found` |
+>>> | show survey |  | `sh curl-scripts/surveys/index.sh` | `201 Created` | `401 Not Found` |
+>>> | update survey | ```{ "survey": { "title": "'"${TITLE}"'", "question": "'"${QUESTION}"'" } }``` | `TITLE='TITLE' QUESTION='QUESTION' sh curl-scripts/survey/update-survey.sh` | `201 Created` | `401 Not Found` |
+>>> | delete participant | ```{ "survey": { "surveyId": "'"${PARTICIPANT_ID}"'" } }``` | ```SURVEY_ID="SURVEY_ID_HERE" PARTICIPANT_ID="PARTICIPANT_ID_HERE" sh curl-scripts/surveys/remove_participant.sh``` | `201 Created` | `401 Not Found` |
+>>> | delete survey |  | `sh curl-sctipts/surveys/destroy.sh` | `201 Created` | `401 Not Found` |
+>>>
+>> ### Participant Routes 
+>>> | HTTP Method | URL Path | Action | CRUD |
+>>> |--|--|--|--|
+>>> | POST | /participants | create | (C)reate |
+>>> | GET | /participants | index or list | (R)ead |
+>>> | GET | /participants/:id | show or retrieve | (R)ead |
+>>> | PATCH | /participants/:id | update | (U)pdate |
+>>> | DELETE | /participants/:id | destroy | (D)elete |
+>>>
+>>> #### Curl-Scripts
+>>> | Action | JSON | Command | Success | Failure | 
+>>> |--|--|--|--|--|
+>>> | create participant | ```{ "participant": { "name": "'"${NAME}"'", "hometown": "'"${HOMETOWN}"'" } }``` | ```NAME="John Doe" HOMETOWN="Boston" sh curl-scripts/participants/create.sh``` | `201 Created` | `401 Not Found` |
+>>> | index participants |  | `sh curl-scripts/participant/index.sh` | `201 Created` | `401 Not Found` |
+>>> | show participant |  | `sh curl-scripts/participant/show.sh` | `201 Created` | `401 Not Found` |
+>>> | update participant | ```{ "participant": { "name": "'"${NAME}"'", "hometown": "'"${HOMETOWN}"'" } }``` | `sh curl-scripts/participant/update.sh` | `201 Created` | `401 Not Found` |
+>>> | destroy participant |  | `sh curl-scripts/participant/destroy.sh` | `201 Created` | `401 Not Found` |
+>>>
+>> ### Other Routes 
+>>> | HTTP Method | URL Path | Action | CRUD |
+>>> |--|--|--|--|
+>>> | POST | /responses | create | (C)reate |
+>>> | PATCH | /responses/:id | update | (U)pdate |
+>>> | DELETE | /responses/:id | destroy | (D)estroy |
+>>>
+>>> #### Curl-Scripts
+>>> | Action | JSON | Command | Success | Failure | 
+>>> |--|--|--|--|--|
+>>> | create response | ```{ "response": { "response": "'"${RESPONSE}"'", "surveyId": "'"${SURVEY_ID}"'", "participant": "'"${PARTICIPANT_ID}"'" } }``` | `sh curl-scripts/responses/create.sh` | `201 Created` | `401 Not Found` |
+>>> | update response | ```{ "response": { "response": "'"${RESPONSE}"'", "surveyId": "'"${SURVEY_ID}"'", "participant": "'"${PARTICIPANT_ID}"'" } }``` | `sh curl-scripts/responses/update.sh` | `201 Created` | `401 Not Found` |
+>>> | delete response | ```{ "response": { "surveyId": "'"${SURVEY_ID}"'" } }``` | `sh curl-scripts/responses/destroy.sh` | `201 Created` | `401 Not Found` |
+>>
 > ## Entity Relationship Diagram
 > ![ERD](https://media.git.generalassemb.ly/user/33705/files/ee2d2700-8bda-11eb-84db-4a4ec188d15a)
 > 
