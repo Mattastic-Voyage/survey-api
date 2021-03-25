@@ -1,10 +1,10 @@
 # SurveyUs API
 > | Contents | |
 > |-----|-----|
-> | [About]() | [Technologies Used]() |
-> | [Routes]() | [Future Iterations]() |
-> | [ERD]() | [Links]() |
-> | [Planning]()| |
+> | [About](https://github.com/Mattastic-Voyage/survey-api#about-surveyus) | [Technologies Used](https://github.com/Mattastic-Voyage/survey-api#technologies-employed) |
+> | [Routes](https://github.com/Mattastic-Voyage/survey-api#catalogue-of-routes) | [Future Iterations](https://github.com/Mattastic-Voyage/survey-api#future-iterations) |
+> | [ERD](https://github.com/Mattastic-Voyage/survey-api#entity-relationship-diagram) | [Links](https://github.com/Mattastic-Voyage/survey-api#links) |
+> | [Planning](https://github.com/Mattastic-Voyage/survey-api#planning)| |
 >
 > ## About SurveyUs
 > The _SurveyUs_ API is the backend connection between the [_SurveyUs_](https://github.com/Mattastic-Voyage/survey-client) client side and the [MongoDB](https://www.mongodb.com/) database. This API utilizes multiple models: a User model and a Survey model. The _SurveyUs_ App will allow users to signup/signin and create surveys which are then publicly available to non-users to participate in.
@@ -66,7 +66,7 @@
 >>> | update participant | ```{ "participant": { "name": "'"${NAME}"'", "hometown": "'"${HOMETOWN}"'" } }``` | `sh curl-scripts/participant/update.sh` | `201 Created` | `401 Not Found` |
 >>> | destroy participant |  | `sh curl-scripts/participant/destroy.sh` | `201 Created` | `401 Not Found` |
 >>>
->> ### Other Routes 
+>> ### Response Routes 
 >>> | HTTP Method | URL Path | Action | CRUD |
 >>> |--|--|--|--|
 >>> | POST | /responses | create | (C)reate |
