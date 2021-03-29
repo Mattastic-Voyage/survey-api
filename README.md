@@ -26,6 +26,8 @@
 >>>> | sign-out |  | `TOKEN="<token>" sh curl-scripts/auth/sign-out` | `201 No Content` |  |
 >>>> | change-password | ``{ "passwords": { "old": "'"${OLDPW}"'", "new": "'"${NEWPW}"'" } }`` | `204 No Content` | `401 Not Found` | 
 >> 
+>> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
+>>
 >> ### Survey Routes 
 >>> | HTTP Method | URL Path | Action | CRUD |
 >>> |--|--|--|--|
@@ -48,6 +50,9 @@
 >>> | delete participant | ```{ "survey": { "surveyId": "'"${PARTICIPANT_ID}"'" } }``` | ```SURVEY_ID="SURVEY_ID_HERE" PARTICIPANT_ID="PARTICIPANT_ID_HERE" sh curl-scripts/surveys/remove_participant.sh``` | `201 Created` | `401 Not Found` |
 >>> | delete survey |  | `sh curl-sctipts/surveys/destroy.sh` | `201 Created` | `401 Not Found` |
 >>>
+>>
+>> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
+>>
 >> ### Participant Routes 
 >>> | HTTP Method | URL Path | Action | CRUD |
 >>> |--|--|--|--|
@@ -66,6 +71,8 @@
 >>> | update participant | ```{ "participant": { "name": "'"${NAME}"'", "hometown": "'"${HOMETOWN}"'" } }``` | `sh curl-scripts/participant/update.sh` | `201 Created` | `401 Not Found` |
 >>> | destroy participant |  | `sh curl-scripts/participant/destroy.sh` | `201 Created` | `401 Not Found` |
 >>>
+>> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
+>>
 >> ### Response Routes 
 >>> | HTTP Method | URL Path | Action | CRUD |
 >>> |--|--|--|--|
@@ -80,9 +87,13 @@
 >>> | update response | ```{ "response": { "response": "'"${RESPONSE}"'", "surveyId": "'"${SURVEY_ID}"'", "participant": "'"${PARTICIPANT_ID}"'" } }``` | `sh curl-scripts/responses/update.sh` | `201 Created` | `401 Not Found` |
 >>> | delete response | ```{ "response": { "surveyId": "'"${SURVEY_ID}"'" } }``` | `sh curl-scripts/responses/destroy.sh` | `201 Created` | `401 Not Found` |
 >>
+>> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
+>>
 > ## Entity Relationship Diagram
 > ![ERD](https://media.git.generalassemb.ly/user/33705/files/ee2d2700-8bda-11eb-84db-4a4ec188d15a)
 > 
+> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
+>
 > ## Planning
 >> The planning and breakdown of this project happened over the course of several long form conversations. A special thanks to [Matt Eder](https://github.com/mjeder) for the organization and itemization of requirements.
 >>
@@ -93,6 +104,8 @@
 >>> | [Eric howard](https://github.com/EricHoward27) | - Tested the [API](https://github.com/Mattastic-Voyage/survey-api) with [Postman](https://www.postman.com/)<br />- Hard coded the [API](https://github.com/Mattastic-Voyage/survey-api) using [VS Code](https://code.visualstudio.com/)<br />- Translated our models into the appropriate schema and routes | - [Postman](https://www.postman.com/) champion in residence<br />- Identified and modified work from day prior to produce clean and functional Create/Update/Index requests |
 >>> | [Ken Cox](https://github.com/xpertimage) | - Drew up the ERD<br />- Spearheaded the conversation to articulate the <br />structure of the [API](https://github.com/Mattastic-Voyage/survey-api)<br />- Provided examples of previous successes to help inform the sculpting of the [API](https://github.com/Mattastic-Voyage/survey-api) | - API coding driver of the Day<br />- Identified similarities between previous experience and what our design would be |
 >>> | [Matt Moore](https://github.com/mmmoore1313) |  - Drew up the Wireframe<br />- Did the initial deployment of the [Client](https://github.com/Mattastic-Voyage/survey-client) to [GH-Pages](https://mattastic-voyage.github.io/survey-client/)<br />- Drafted the README.md | - Annotated README.md<br />- Guided Version Control best practices |
+>
+> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
 >
 > ## Technologies Employed
 >> | **General Development** | **[Client](https://github.com/Mattastic-Voyage/survey-client) Development** | **[API](https://github.com/Mattastic-Voyage/survey-api) Development** | **Deployment** |
@@ -107,6 +120,8 @@
 >> | [CSS](https://www.w3schools.com/css/) | | | |
 >> | [SCSS](https://sass-lang.com/) | | | |
 >
+> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
+>
 > ## Future Iterations
 >> - Greater range of question/response types
 >>> - Currently the response types are limited to Boolean true or false
@@ -115,10 +130,14 @@
 >>> - There is no block to a surveyed individual retaking surveys and spamming answers/results
 >>>> - The current plan is to provide front end logic to prevent this; however a long term solution would be to code in a `isUnique` filter for responses as well as surveys
 > 
+> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
+>
 > ## Links:
 >> | | **Deployed Sites** | **Repositories** |
 >> |--|--|--|
 >> | Front End App: | [https://mattastic-voyage.github.io/survey-client/](https://mattastic-voyage.github.io/survey-client/) | [Client](https://github.com/Mattastic-Voyage/survey-client) |
 >> | Back End API: | [https://frozen-thicket-25455.herokuapp.com/](https://frozen-thicket-25455.herokuapp.com/) | [API](https://github.com/Mattastic-Voyage/survey-api) |
 >> | Team Home: | | [Mattastic-Voyage](https://github.com/Mattastic-Voyage) |
+>
+> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
 
