@@ -90,12 +90,12 @@
 >> ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
 >>
 > ## Entity Relationship Diagram
-> ![ERD](https://media.git.generalassemb.ly/user/33705/files/ee2d2700-8bda-11eb-84db-4a4ec188d15a)
-> 
+> ![ERD](https://user-images.githubusercontent.com/77598048/112877456-c33c4a80-9094-11eb-8bcc-86791829b434.png)
+
 > ###### [(Return to top)](https://github.com/Mattastic-Voyage/survey-api#surveyus-api)
 >
 > ## Planning
->> The planning and breakdown of this project happened over the course of several long form conversations. A special thanks to [Matt Eder](https://github.com/mjeder) for the organization and itemization of requirements.
+>> The planning and breakdown of this project happened over the course of several long form conversations. A special thanks to [Matt Eder](https://github.com/mjeder) for the organization and itemization of requirements.[Project Requirements Checklist](https://docs.google.com/spreadsheets/d/1kJRGhsgKEV9xVL3lXtyz6cqBWf14lm6JuXD02uneldA/edit?usp=sharing).
 >>
 >>> | | **Day 2: Back-End API Sprint** | **Day 3: Back-End API Sprint (continued)** |
 >>> |--|--|--|
