@@ -55,18 +55,6 @@
 >
 > ###### [(Return to top)]()
 >
-> ## Planning
->> <!-- Desctiption -->
->>
->>> |  | **Day 1:** | **Day 2:** | **...**
->>> |--|--|--|--|
->>> | Description | <!-- Description --> | <!-- Description --> | <!-- Description --> |
->>> | [Teamate]() | <!-- What they did --> | <!-- What they did -->  | <!-- What they did -->  |
->>> | [Teamate]() | <!-- What they did --> | <!-- What they did -->  | <!-- What they did -->  |
->
->
-> ###### [(Return to top)]()
->
 > ## Technologies Employed
 >> | **General Development** | **[Client]() Development** | **[API]() Development** | **Deployment** |
 >> |--|--|--|--|
