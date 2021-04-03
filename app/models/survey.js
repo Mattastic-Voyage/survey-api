@@ -27,9 +27,9 @@ const surveySchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     // the name of the model to which they refer
     ref: 'User'
-  },
+  }
 }, {
-    timestamps: true
+  timestamps: true
 })
 
 module.exports = mongoose.model('Survey', surveySchema)
