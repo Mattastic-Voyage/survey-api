@@ -45,4 +45,15 @@ router.patch('/cheesewheels/:id', (req, res, next) => {
     .catch(next)
 })
 
+// Destroy
+// DELETE /cheesewheels/:id
+router.delete('/cheesewheels/:id', (req, res, next) => {
+  const id = req.params.id
+  CheeseWheel.findById(id)
+    .then(handle404)
+    .then(cheesewheel => cheesewheel.deleteOne())
+    .then(() => res.sendStatus(204))
+    .catch(next)
+})
+
 module.exports = router
