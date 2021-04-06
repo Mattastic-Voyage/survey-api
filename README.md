@@ -13,39 +13,23 @@
 >>>> 3) Actions that can change data are to be owned by the User performing the change
 >
 > ## Catalogue of Routes
->> ### Auth Routes 
+>> ### CheeseWheel Routes 
 >>> | HTTP Method | URL Path | Action | CRUD |
 >>> |--|--|--|--|
->>> | POST |  | create | (C)reate |
->>> | GET |  | index or list | (R)ead |
->>> | GET |  | show or retrieve | (R)ead |
->>> | PATCH |  | update | (U)pdate |
->>> | DELETE |  | destroy | (D)elete |
+>>> | POST | /cheesewheels | create | (C)reate |
+>>> | GET | /cheesewheels | index or list | (R)ead |
+>>> | GET | /cheesewheels/:id | show or retrieve | (R)ead |
+>>> | PATCH | /cheesewheels/:id | update | (U)pdate |
+>>> | DELETE | /cheesewheels/:id | destroy | (D)elete |
 >>>
 >>> #### Curl-Scripts
 >>> | Action | JSON | Command | Success | Failure | 
 >>> |--|--|--|--|--|
->>> |  |  |  |  |  |
->>
->>
->> ###### [(Return to top)]()
->>
->> ### Other Routes 
->>> | HTTP Method | URL Path | Action | CRUD |
->>> |--|--|--|--|
->>> | POST |  | create | (C)reate |
->>> | GET |  | index or list | (R)ead |
->>> | GET |  | show or retrieve | (R)ead |
->>> | PATCH |  | update | (U)pdate |
->>> | DELETE |  | destroy | (D)elete |
->>>
->>> #### Curl-Scripts
->>> | Action | JSON | Command | Success | Failure | 
->>> |--|--|--|--|--|
->>> |  |  |  | `201 Created` | `401 Not Found` |
->>> |  |  |  | `201 Created` | `401 Not Found` |
->>> |  |  |  | `201 Created` | `401 Not Found` |
->>> |  |  |  | `201 Created` | `401 Not Found` |
+>>> | create cheesewheel | ``'{ "cheesewheel" : { "variety": "'"${VAR}"'", "age": "'"${AGE}"'", "health": "'"${HEAL}"'" } }'`` | ``TOKEN="<user token>" VAR="<string>" AGE="<num>" HEAL="<num>" sh curl-scripts/cheesewheel/create-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
+>>> | index cheesewheels |  | ``sh curl-scripts/cheesewheel/index.sh`` | `201 Created` | `401 Not Found` |
+>>> | show cheesewheel |  | ``ID="cheese ID" sh curl-scripts/cheesewheel/show-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
+>>> | update cheesewheel | ``'{ "cheesewheel" : { "variety": "'"${VAR}"'", "age": "'"${AGE}"'", "health": "'"${HEAL}"'" } }'`` | ``ID="<cheese ID>" VAR="<new variety name>" AGE="<new age>" HEAL="<new health data>" sh curl-scripts/cheesewheel/update-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
+>>> | destroy cheesewheel |  | ``ID="<cheese ID>" sh curl-scripts/cheesewheel/delete-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
 >
 > ###### [(Return to top)]()
 >
