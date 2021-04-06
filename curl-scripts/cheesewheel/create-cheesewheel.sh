@@ -1,4 +1,5 @@
 #!/bin/bash
+# TOKEN="<user token>" VAR="<string, cheese type" AGE="num, cheese age" HEAL="num, health gained" sh curl-scripts/cheesewheel/create-cheesewheel.sh
 
 API="http://localhost:4741"
 URL_PATH="/cheesewheels"
