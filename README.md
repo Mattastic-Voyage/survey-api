@@ -17,17 +17,17 @@
 >>> | HTTP Method | URL Path | Action | CRUD |
 >>> |--|--|--|--|
 >>> | POST | /cheesewheels | create | (C)reate |
->>> | GET | cheesewheels | index or list | (R)ead |
->>> | GET |  | show or retrieve | (R)ead |
+>>> | GET | /cheesewheels | index or list | (R)ead |
+>>> | GET | /cheesewheel/:id | show or retrieve | (R)ead |
 >>> | PATCH |  | update | (U)pdate |
 >>> | DELETE |  | destroy | (D)elete |
 >>>
 >>> #### Curl-Scripts
 >>> | Action | JSON | Command | Success | Failure | 
 >>> |--|--|--|--|--|
->>> | create cheeseWheel | ``'{ "cheesewheel" : { "variety": "'"${VAR}"'", "age": "'"${AGE}"'", "health": "'"${HEAL}"'" } }'`` | ``TOKEN="<user token>" VAR="<string>" AGE="<num>" HEAL="<num>" sh curl-scripts/cheesewheel/create-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
+>>> | create cheesewheel | ``'{ "cheesewheel" : { "variety": "'"${VAR}"'", "age": "'"${AGE}"'", "health": "'"${HEAL}"'" } }'`` | ``TOKEN="<user token>" VAR="<string>" AGE="<num>" HEAL="<num>" sh curl-scripts/cheesewheel/create-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
 >>> | index cheesewheels |  | ``sh curl-scripts/cheesewheel/index.sh`` | `201 Created` | `401 Not Found` |
->>> |  |  |  | `201 Created` | `401 Not Found` |
+>>> | show cheesewheel |  | ``ID="cheese ID" sh curl-scripts/cheesewheel/show-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
 >>> |  |  |  | `201 Created` | `401 Not Found` |
 >
 > ###### [(Return to top)]()
