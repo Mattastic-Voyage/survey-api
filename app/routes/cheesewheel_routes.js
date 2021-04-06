@@ -33,4 +33,16 @@ router.get('/cheesewheels/:id', (req, res, next) => {
     .catch(next)
 })
 
+// Update
+// PATCH /cheesewheels/:id
+router.patch('/cheesewheels/:id', (req, res, next) => {
+  const id = req.params.id
+  const cwData = req.body.cheesewheel
+  CheeseWheel.findById(id)
+    .then(handle404)
+    .then(cheesewheel => cheesewheel.updateOne(cwData))
+    .then(() => res.sendStatus(204))
+    .catch(next)
+})
+
 module.exports = router
