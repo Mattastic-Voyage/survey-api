@@ -29,7 +29,7 @@
 >>> | index cheesewheels |  | ``sh curl-scripts/cheesewheel/index.sh`` | `201 Created` | `401 Not Found` |
 >>> | show cheesewheel |  | ``ID="cheese ID" sh curl-scripts/cheesewheel/show-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
 >>> | update cheesewheel | ``'{ "cheesewheel" : { "variety": "'"${VAR}"'", "age": "'"${AGE}"'", "health": "'"${HEAL}"'" } }'`` | ``ID="<cheese ID>" VAR="<new variety name>" AGE="<new age>" HEAL="<new health data>" sh curl-scripts/cheesewheel/update-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
->>> | destroy cheesewheel |  |  | `201 Created` | `401 Not Found` |
+>>> | destroy cheesewheel |  | ``ID="<cheese ID>" sh curl-scripts/cheesewheel/delete-cheesewheel.sh`` | `201 Created` | `401 Not Found` |
 >
 > ###### [(Return to top)]()
 >
