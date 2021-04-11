@@ -11,9 +11,9 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
     "cheesewheel" : {
-      "variety": "'"${VAR}"'",
+      "variety": "'"${VARIETY}"'",
       "age": "'"${AGE}"'",
-      "health": "'"${HEAL}"'"
+      "health": "'"${HEALTH}"'"
     }
   }'
   

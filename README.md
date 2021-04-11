@@ -47,12 +47,6 @@
 >
 > ###### [(Return to top)]()
 >
-> ## Future Iterations
-> <!-- Desctiption -->
->
->
-> ###### [(Return to top)]()
->
 > ## Links
 >> | | **Deployed Sites** | **Repositories** |
 >> |--|--|--|
