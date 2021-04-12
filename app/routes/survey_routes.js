@@ -26,7 +26,7 @@ router.get('/surveys/:id', (req, res, next) => {
     .populate('responses.respondent')
     .populate('participants')
     .then(handle404)
-    .then(survey => res.json({ survey: survey}))
+    .then(survey => res.json({ survey: survey }))
     .catch(next)
 })
 
