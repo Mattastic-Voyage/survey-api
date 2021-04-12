@@ -1,8 +1,10 @@
 # Bonus Alterations
 > | Contents |  |
 > |--|--|
-> | [About]() |  |
->
+> | [About]() | [Technologies Used]() |
+> | [Routes]() | [Future Iterations]() |
+> | [ERD]() | [Links]() |
+> |  |  |
 >
 > ## About App
 > This api contains the bonus alterations made to the SurveyUs app for my resubmission to General Assembly.
@@ -34,13 +36,13 @@
 > ###### [(Return to top)]()
 >
 > ## Entity Relationship Diagram
-> ![ERD](linkToErd)
+> ![ERD](https://media.git.generalassemb.ly/user/33705/files/e1488700-9b39-11eb-932e-71e3cd6e9a5e)
 >
 >
 > ###### [(Return to top)]()
 >
 > ## Technologies Employed
->> | **General Development** | **[Client]() Development** | **[API]() Development** | **Deployment** |
+>> | **General Development** | **[Client](https://github.com/mmmoore1313/survey-client) Development** | **[API](https://github.com/Mattastic-Voyage/survey-api) Development** | **Deployment** |
 >> |--|--|--|--|
 >> | [Technology Name](docs) | [Technology Name](docs) | [Technology Name](docs) | [Technology Name](docs) |
 >
@@ -50,8 +52,8 @@
 > ## Links
 >> | | **Deployed Sites** | **Repositories** |
 >> |--|--|--|
->> | Front End App: | [appUrl](appUrl) | [appRepositoryUrl](appRepositoryUrl)|
->> | Database App | [dbUrl](dbUrl) | [dbRepositoryUrl](dbRepositoryUrl) |
+>> | Front End App: | [mmmoore1313.github.io/survey-client/](mmmoore1313.github.io/survey-client/) | [Survey-client](https://github.com/mmmoore1313/survey-client)|
+>> | Database App | [https://safe-escarpment-34442.herokuapp.com/](https://safe-escarpment-34442.herokuapp.com/) | [Survey-API](https://github.com/Mattastic-Voyage/survey-api) |
 >
 > ###### [(Return to top)]()
 >
